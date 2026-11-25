@@ -12,6 +12,15 @@ AI-Based Farmer Query Support and Advisory System for Kerala.
 ## Requirements
 Node.js 20+, PostgreSQL 15+, Python 3.11+
 
+## Deploy to Render
+
+1. In the [Render Dashboard](https://dashboard.render.com/), choose **New → Blueprint** and connect `aldadkhan/krishi-ai-ngo-demo` on the `main` branch.
+2. Apply the Blueprint from `render.yaml`. It creates the static frontend, Node API and Python advisory service.
+3. When prompted, set `ADMIN_EMAIL` and a strong, unique `ADMIN_PASSWORD`. Render generates `JWT_SECRET`; do not reuse the local demo password for a public deployment.
+4. Wait for all three services to finish deploying, then open the `krishi-ai-web` URL.
+
+The free demo uses the local JSON store and synthetic reports; free service filesystems are ephemeral, so accounts and reports created after deployment can be lost when the service restarts or redeploys. Use a persistent database and storage plan before using this for real users or data. The included AI service is demonstration guidance, not a certified diagnosis service.
+
 ## 1. Database
 Create a PostgreSQL database named `krishi_ai`, then run:
 ```sql
