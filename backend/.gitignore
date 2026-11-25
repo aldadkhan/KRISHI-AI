@@ -1,0 +1,6 @@
+node_modules/
+.env
+data/demo-store.json
+data/demo-store.json.tmp
+uploads/*
+!uploads/.gitkeep
